@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NetScope | Network Visualizer</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">N</div>
+            <div>
+                <h1>NetScope</h1>
+                <span>Network Visualizer</span>
+            </div>
+        </div>
+
+        <div class="project-name">
+            Untitled Network Project
+        </div>
+
+        <div class="top-actions">
+            <span class="status">
+                <span class="status-dot"></span>
+                Ready
+            </span>
+            <button class="primary-btn">Save Project</button>
+        </div>
+    </header>
+
+    <main class="workspace">
+
+        <aside class="sidebar">
+            <h2>Network Devices</h2>
+            <p class="subtitle">Available components</p>
+
+            <div class="device-list">
+                <div class="device-item" data-type="pc">
+                    <span>💻</span>
+                    <div>
+                        <strong>Computer</strong>
+                        <small>End Device</small>
+                    </div>
+                </div>
+
+                <div class="device-item" data-type="router">
+                    <span>📡</span>
+                    <div>
+                        <strong>Router</strong>
+                        <small>Network Layer</small>
+                    </div>
+                </div>
+
+                <div class="device-item" data-type="switch">
+                    <span>🔀</span>
+                    <div>
+                        <strong>Switch</strong>
+                        <small>Data Link Layer</small>
+                    </div>
+                </div>
+
+                <div class="device-item" data-type="server">
+                    <span>🖥️</span>
+                    <div>
+                        <strong>Server</strong>
+                        <small>End Device</small>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <section class="main-area">
+
+            <div class="canvas-toolbar">
+                <div>
+                    <strong>Topology Workspace</strong>
+                    <small>Network design canvas</small>
+                </div>
+
+                <button id="reset-btn">Reset View</button>
+            </div>
+
+            <div class="canvas" id="network-canvas">
+                <div class="canvas-placeholder" id="empty-state">
+                    <div class="placeholder-icon">⌘</div>
+                    <h3>Welcome to NetScope</h3>
+                    <p>Your network topology workspace is ready.</p>
+                    <small>Device placement will be available in the next phase.</small>
+                </div>
+            </div>
+
+            <div class="event-panel">
+                <div class="event-heading">
+                    <strong>Network Events</strong>
+                    <span>System Logs</span>
+                </div>
+
+                <div id="event-log">
+                    <p>System initialized successfully.</p>
+                    <p>Waiting for network configuration...</p>
+                </div>
+            </div>
+
+        </section>
+
+        <aside class="inspector">
+            <h2>Inspector</h2>
+            <p class="subtitle">Device properties</p>
+
+            <div id="inspector-content">
+                <div class="inspector-empty">
+                    <span>ⓘ</span>
+                    <p>Select a device to inspect its properties.</p>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
